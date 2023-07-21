@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Components
+
+<div>Count: @Counter</div>
+<button type="button" @onclick="onClickIncreaseCounter">Increase Counter</button>
+
+@code {
+
+    [Parameter]
+    public int Counter { get; set; }
+
+    private void onClickIncreaseCounter()
+    {
+        Counter++;
+    }
+}

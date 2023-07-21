@@ -1,0 +1,29 @@
+﻿@model HomeModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>Count: <span id="counter">@Model.Counter</span></div>
+<button type="button" onclick="onClickIncreaseCounter()">Increase Counter</button>
+
+<script>
+
+    let counter = @Model.Counter;
+    let counterEl;
+
+    document.addEventListener("DOMContentLoaded", () => {
+        counterEl = document.getElementById("counter");
+    });
+
+    function onClickIncreaseCounter(e) {
+        counter++;
+        counterEl.innerText = counter;
+    }
+
+</script>

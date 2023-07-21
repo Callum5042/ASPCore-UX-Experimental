@@ -1,0 +1,9 @@
+﻿@model HomeModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    @(await Html.RenderComponentAsync<BlazorServerMvc.Views.Shared.Components.Component>(RenderMode.ServerPrerendered, new { Counter = Model.Counter }))
+</div>
