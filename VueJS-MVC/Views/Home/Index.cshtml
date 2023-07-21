@@ -1,0 +1,45 @@
+﻿@model HomeModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    [v-cloak] {
+        display: none;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div id="app" v-cloak>
+    <div>Count: {{ counter }}</div>
+    <button type="button" v-on:click="increaseCounter">Increase Counter</button>
+</div>
+
+<script type="module">
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+    const app = createApp({
+
+        // Data
+        data() {
+            return {
+                counter: @Model.Counter
+            }
+        },
+
+        // Functions
+        methods: {
+            increaseCounter() {
+                this.counter++;
+            }
+        }
+    });
+
+    app.mount('#app')
+
+</script>
