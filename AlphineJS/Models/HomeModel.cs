@@ -1,4 +1,4 @@
-﻿namespace VanillaJavaScript.Models
+﻿namespace AlphineJS.Models
 {
     public class HomeModel
     {

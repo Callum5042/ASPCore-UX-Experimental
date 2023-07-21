@@ -1,7 +1,4 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http.Headers;
-
-namespace VanillaJavaScript
+namespace AlphineJS
 {
     public class Program
     {

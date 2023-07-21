@@ -1,8 +1,8 @@
-﻿using VanillaJavaScript.Models;
+﻿using AlphineJS.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace VanillaJavaScript.Controllers
+namespace AlphineJS.Controllers
 {
     public class HomeController : Controller
     {

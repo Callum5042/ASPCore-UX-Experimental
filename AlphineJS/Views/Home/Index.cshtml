@@ -1,0 +1,39 @@
+﻿@model HomeModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="//unpkg.com/alpinejs" defer></script>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@*<div x-data="{ 
+    counter: @Model.Counter, 
+    increaseCounter() { 
+        this.counter++;
+    }
+}">
+    <div>Count: <span x-text="counter"></span></div>
+    <button type="button" x-on:click="increaseCounter">Increase Counter</button>
+</div>*@
+
+<div x-data="counter">
+    <div>Count: <span x-text="counter"></span></div>
+    <button type="button" x-on:click="increaseCounter()">Increase Counter</button>
+</div>
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('counter', () => ({
+            counter: @Model.Counter,
+            increaseCounter() {
+                this.counter++;
+            }
+        }))
+    })
+</script>
